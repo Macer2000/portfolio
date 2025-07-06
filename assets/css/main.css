@@ -1325,7 +1325,7 @@ section,
 }
 
 .cert-icon img {
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: filter 0.3s ease, transform 0.4s ease;
 }
 
 .cert-icon img:hover {
