@@ -226,4 +226,28 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+ 
+
 })();
+document.addEventListener('DOMContentLoaded', function () {
+  const certIcon = document.querySelector('.cert-icon');
+  const popup = document.getElementById('certPopup');
+  const popupCloseBtn = document.getElementById('popupCloseBtn');
+
+  if (certIcon && popup && popupCloseBtn) {
+    certIcon.addEventListener('click', function (e) {
+      e.preventDefault();
+      popup.classList.add('show');
+    });
+
+    popupCloseBtn.addEventListener('click', function () {
+      popup.classList.remove('show');
+    });
+
+    window.addEventListener('click', function (e) {
+      if (e.target === popup) {
+        popup.classList.remove('show');
+      }
+    });
+  }
+});
