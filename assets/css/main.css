@@ -910,24 +910,38 @@ section,
   margin-right: 20px;
 }
 
-.services .service-item .icon i {
-  color: var(--contrast-color);
-  font-size: 24px;
-  line-height: 0;
+.services .service-item .icon {
+    background-color: white; /* or transparent if you want no circle */
+    border-radius: 50%;       /* keeps it circular if needed */
+    padding: 10px;            /* optional, for spacing */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.services .service-item .icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
 
 .services .service-item:hover .icon {
-  background: var(--surface-color);
+    background-color: #f0f0f0; /* Light Gray Hover */
 }
-
 .services .service-item:hover .icon i {
   color: var(--accent-color);
+}
+.services .service-item:hover .icon svg {
+    color: var(--accent-color);
 }
 
 .services .service-item .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
+}
+.services .service-item:hover .title {
+    color: var(--accent-color); /* your hover color */
 }
 
 .services .service-item .title a {
